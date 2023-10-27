@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Atualizar Informações" icon-name="standard:account">
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input name="name" type="text" label="Nome" onchange={handleNameChange}></lightning-input>
+            <lightning-input name="document" type="text" label="CPF/CNPJ" onchange={handleDocumentChange}></lightning-input>
+            <lightning-combobox name="type" label="Tipo" options={picklistValues} placeholder="Selecione um tipo" onchange={handleTypeChange}></lightning-combobox>
+        </div>
+        <p slot="footer"><lightning-button variant="brand" label="Alterar" title="Atualizar Conta" onclick={updateAccount} class="slds-m-left_x-small"></lightning-button></p>
+    </lightning-card>
+</template>
